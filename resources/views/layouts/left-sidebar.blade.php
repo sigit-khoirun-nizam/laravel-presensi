@@ -23,6 +23,8 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
+           @if (auth()->user()->level == "karyawan")
+                   
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
                 <i class="far fa-calendar-alt"></i>
@@ -47,6 +49,8 @@
             </ul>
           </li>
 
+          @endif
+
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
                 <i class="fas fa-newspaper"></i>
@@ -56,18 +60,22 @@
               </p>
             </a>
             <ul class="nav nav-treeview">
+                @if (auth()->user()->level == "karyawan")
               <li class="nav-item">
                 <a href="#" class="nav-link">
                     <i class="fas fa-user"></i>
                   <p>Presensi Employee</p>
                 </a>
               </li>
+              @endif
+              @if (auth()->user()->level == "admin")
               <li class="nav-item">
                 <a href="#" class="nav-link">
                     <i class="fas fa-user-friends"></i>
                   <p>Presensi All</p>
                 </a>
               </li>
+              @endif
             </ul>
           </li>
 
