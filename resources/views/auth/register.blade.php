@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>AdminLTE 3 | Log in</title>
+    <title>AdminLTE 3 | Registration Page</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -20,18 +20,26 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
 
-<body class="hold-transition login-page">
-    <div class="login-box">
-        <div class="login-logo">
-            <a href="../../index2.html"><b>Admin</b>LTE</a>
+<body class="hold-transition register-page">
+    <div class="register-box">
+        <div class="register-logo">
+            <a href="{{ url('/') }}"><b>Admin</b>LTE</a>
         </div>
-        <!-- /.login-logo -->
-        <div class="card">
-            <div class="card-body login-card-body">
-                <p class="login-box-msg">Sign in to start your session</p>
 
-                <form action="{{ route('postlogin') }}" method="post">
+        <div class="card">
+            <div class="card-body register-card-body">
+                <p class="login-box-msg">Daftar</p>
+
+                <form action="{{ route('simpanregistrasi') }}" method="post">
                     @csrf
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" name="name" placeholder="Full name">
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-user"></span>
+                            </div>
+                        </div>
+                    </div>
                     <div class="input-group mb-3">
                         <input type="email" class="form-control" name="email" placeholder="Email">
                         <div class="input-group-append">
@@ -53,20 +61,21 @@
                         </div>
                         <!-- /.col -->
                         <div class="col-4">
-                            <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+                            <button type="submit" class="btn btn-primary btn-block">Register</button>
                         </div>
                         <!-- /.col -->
                     </div>
                 </form>
+                <p>
+                    Sudah punya akun ? <b><a href="{{ route('login') }}" class="text-center">Klik Disini</a></b>
+                </p>
             </div>
-            <!-- /.login-card-body -->
-        </div>
+            <!-- /.form-box -->
+        </div><!-- /.card -->
     </div>
-    <!-- /.login-box -->
+    <!-- /.register-box -->
 
-    <!-- jQuery -->
     @include('layouts.script')
-
 </body>
 
 </html>
