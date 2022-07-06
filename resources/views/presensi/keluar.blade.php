@@ -53,7 +53,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         </div><!-- /.col -->
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
-                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
                                 <li class="breadcrumb-item active">Presensi Keluar</li>
                             </ol>
                         </div><!-- /.col -->
@@ -66,7 +66,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <!-- Main content -->
             <div class="content">
                 <div class="row justify-content-center">
-                    <div class="card card-info card-outline">
+                    <div class="">
+                        
+                    </div>
+                    <div class="card card-outline card-dark">
                         <div class="card-header">Presensi Keluar</div>
                         <div class="card-body">
                             <form action="{{ route('ubah-presensi') }}" method="post">

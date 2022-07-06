@@ -58,6 +58,9 @@
                         <!-- /.col -->
                     </div>
                 </form>
+                <p>
+                    Belum memiliki akun ? <b><a href="{{ route('registrasi') }}" class="text-center">Klik Disini</a></b>
+                </p>
             </div>
             <!-- /.login-card-body -->
         </div>
